@@ -1,0 +1,50 @@
+@import 'fonts';
+@import 'vars';
+@import 'mixins';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+
+@import 'components/effects';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/parts';
+@import 'components/subscribe';
+@import 'components/cards/class-card';
+@import 'components/trial';
+@import 'components/page-top';
+@import 'components/classes';
+
+
+
+@import 'index/index-top';
+@import 'index/everyone';
+@import 'index/fountain';
+@import 'index/instructors-block';
+@import 'index/teachers';
+@import 'index/renewal';
+@import 'index/partners';
+
+
+@import 'about/about-head';
+@import 'about/blockquote';
+@import 'about/level';
+@import 'about/review';
+
+
+@import 'pricing/pricing-head';
+@import 'pricing/pricing-renewal';
+
+@import 'classes/classes';
+
+@import 'single/single-head';
+@import 'single/benefits';
+
+@import 'contact/contact';
+
+
+
+.gg {
+  width: 400px;
+}

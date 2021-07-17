@@ -1,0 +1,68 @@
+.renewal {
+  position: relative;
+  padding: 245px 0 195px;
+  color: #8ea2dc;
+  background-color: #f8f7fc;
+
+  @include media-max($lg) {
+    padding: 200px 0 160px;
+  }
+
+  @include media-max($md) {
+    padding: 150px 0 100px;
+  }
+
+  @include media-max($xs) {
+    padding: 60px 0 70px;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: 62%;
+    height: 743px;
+    object-fit: contain;
+
+    @include media-max($lg) {
+      height: 650px;
+    }
+    @include media-max($sm) {
+      left: 50%;
+    }
+
+    @include media-max($md) {
+      height: 510px;
+    }
+
+    @include media-max($xs) {
+      height: 310px;
+    }
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+    padding-left: 190px;
+
+    @include media-max($md) {
+      padding-left: 0;
+    }
+  }
+
+  &__title {
+    max-width: 490px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-family: 'Lato', sans-serif;
+    font-size: 21px;
+    line-height: 1.5;
+    max-width: 450px;
+    margin-bottom: 45px;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,56 @@
+.blockquote {
+  position: relative;
+  padding: 165px 0 100px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fffefe;
+
+  @include media-max($md) {
+    padding: 130px 0 70px;
+  }
+
+  @include media-max($sm) {
+    padding: 90px 0 40px;
+  }
+
+  @include media-max($xs) {
+    padding: 40px 0 20px;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($accent, 0.8);
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+    display: block;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    font-size: 24px;
+    font-style: italic;
+
+    @include media-max($sm) {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__author {
+    position: relative;
+    z-index: 2;
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

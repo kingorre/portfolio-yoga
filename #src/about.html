@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.min.css">
+		<title>Yoga | About</title>
+	</head>
+	<body>
+
+    @@include('html/components/_header.html')
+    <div class="wrapper">
+      <main class="main">
+        @@include('html/about/_about-head.html')
+        @@include('html/about/_blockquote.html')
+        @@include('html/about/_level.html')
+        @@include('html/about/_review.html')
+        @@include('html/components/_trial.html',{
+          "class": "section-padding"
+        })
+        
+      </main>
+      @@include('html/components/_subscribe.html')
+      @@include('html/components/_footer.html')
+    </div>
+  
+    
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

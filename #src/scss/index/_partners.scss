@@ -1,0 +1,44 @@
+.partners {
+  &__wrapper {
+    position: relative;
+  }
+
+
+  &__slider {
+    position: relative;
+    height: 240px;
+    padding: 30px 0;
+
+    @include media-max($sm) {
+      height: 160px;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+  }
+
+  &__image {
+    text-align: center;
+  }
+
+  &__arrows {
+    @include media-max($xl) {
+      position: absolute;
+      top: 10%;
+      width: 100%;
+      transform: translate(0, 0);
+      z-index: 200;
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+

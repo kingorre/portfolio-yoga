@@ -1,0 +1,107 @@
+.review {
+  font-family: "Lato", sans-serif;
+  color: $accentLight;
+  background-color: #e5eaf7;
+
+  @include media-max($sm) {
+    padding-bottom: 30px;
+  }
+
+  @include media-max($xs) {
+    padding-bottom: 10px;
+  }
+
+  &__wrapper {
+    margin-bottom: 50px;
+  }
+
+  &__slider {
+    max-width: 585px;
+    min-height: 300px;
+    margin-bottom: 90px;
+
+    @include media-max($sm) {
+      margin-bottom: 60px;
+    }
+
+    @include media-max($sm) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__slide {
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-max($sm) {
+      margin-bottom: 20px;
+      width: 50%;
+    }
+  }
+
+  &__num {
+    margin-bottom: 15px;
+    font-size: 42px;
+    color: $accent;
+
+    @include media-max($sm) {
+      font-size: 36px;
+    }
+
+    @include media-max($sm) {
+      font-size: 26px;
+    }
+  }
+
+  &__descr {
+    font-size: 14px;
+  }
+}
+
+.slide-review {
+  text-align: center;
+
+  &__title {
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: $accent;
+  }
+
+  &__text {
+    padding: 0 15px;
+    margin-bottom: 20px;
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: $accent;
+  }
+
+  &__position {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.min.css">
+		<title>Yoga | Home</title>
+	</head>
+	<body>
+
+    @@include('html/components/_header.html')
+    <div class="wrapper">
+      <main class="main">
+        @@include('html/index/_index-top.html')
+        @@include('html/index/_everyone.html')
+        @@include('html/components/_classes.html',{
+          "title": "Our classes"
+        })
+        @@include('html/index/_fountain.html')
+        @@include('html/index/_instructors-block.html')
+        @@include('html/index/_teachers.html')
+        @@include('html/index/_renewal.html')
+        @@include('html/index/_partners.html')
+        
+      </main>
+      @@include('html/components/_subscribe.html')
+      @@include('html/components/_footer.html')
+    </div>
+  
+    
+    <script src="js/script.min.js"></script>
+  </body>
+</html>

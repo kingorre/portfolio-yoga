@@ -1,0 +1,67 @@
+.page-top {
+  position: relative;
+  z-index: 1;
+  padding-top: 260px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  @include media-max($lg) {
+    padding-top: 200px;
+    height: 460px;
+  }
+
+  @include media-max($md) {
+    height: 400px;
+    padding-top: 140px;
+  }
+
+  @include media-max($sm) {
+    height: 340px;
+    padding-top: 80px;
+  }
+
+  @include media-max($sm) {
+    height: 300px;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    font-size: 72px;
+    font-weight: 300;
+    color: $accentDark;
+
+    @include media-max($md) {
+      font-size: 56px;
+    }
+
+    @include media-max($xs) {
+      font-size: 36px;
+    }
+
+    &--small {
+      font-size: 29px;
+
+      @include media-max($md) {
+        font-size: 26px;
+      }
+
+      @include media-max($xs) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  &__text {
+    display: block;
+    max-width: 395px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: $accentLight;
+
+    @include media-max($sm) {
+      max-width: 280px;
+    }
+  }
+}

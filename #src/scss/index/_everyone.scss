@@ -1,0 +1,184 @@
+.everyone {
+  margin-top: -100px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+
+  @include media-max($sm) {
+    margin-top: 0;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: minmax(300px, 570px) minmax(250px, 470px);
+    grid-gap: 130px;
+    padding: 60px 0 100px;
+
+    @include media-max($lg) {
+      grid-gap: 40px;
+    }
+
+    @include media-max($md) {
+      grid-gap: 15px;
+    }
+
+    @include media-max($sm) {
+      padding: 40px 0;
+      grid-template-columns: 1fr;
+    }
+
+    @include media-max($sm) {
+      padding: 30px 0;
+    }
+  }
+
+  &__content {
+    padding-top: 140px;
+
+    @include media-max($sm) {
+      padding-top: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 1.7;
+
+    @include media-max($xs) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__video {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 61.41%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    transition: box-shadow 0.4s, background-color 0.4s;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(calc(-50% + 2px), -50%);
+      fill: $accent;
+      width: 17px;
+      height: 14px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.4s, height 0.4s;
+    }
+
+    &::before {
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
+    &::after {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(#fff, 0.5);
+      border-radius: 50%;
+    }
+
+    &:focus {
+      box-shadow: 0 0 5px 1px $accent;
+    }
+
+    &:hover {
+      &::before {
+        width: 60px;
+        height: 60px;
+      }
+
+      &::after {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    &:active {
+      box-shadow: inset 0 0 20px 2px $accent;
+    }
+  }
+}
+
+.list-everyone {
+  &__item {
+    position: relative;
+    padding-left: 93px;
+
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+
+    &::before {
+      @extend %bg-pseudo;
+      top: 0;
+      left: 0;
+      width: 66px;
+      height: 66px;
+      background-position: left top;
+    }
+
+    &--balance::before {
+      background-image: url(../img/benefit-icon-1.png);
+    }
+
+    &--weight::before {
+      background-image: url(../img/benefit-icon-2.png);
+    }
+
+    &--meditation::before {
+      background-image: url(../img/benefit-icon-3.png);
+    }
+
+    &--yoga::before {
+      background-image: url(../img/benefit-icon-4.png);
+    }
+
+    &--increased::before {
+      background-image: url(../img/benefit-icon-5.png);
+    }
+
+    @include media-max($xs) {
+      padding-left: 75px;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    color: #000;
+
+    @include media-max($xs) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__text {
+    font-family: 'Lato', sans-serif;
+  }
+}

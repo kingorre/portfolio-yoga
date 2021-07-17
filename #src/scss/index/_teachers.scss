@@ -1,0 +1,39 @@
+.teachers {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 60px;
+
+    @include media-max($md) {
+      grid-gap: 30px;
+    }
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__content {
+  }
+
+  &__name {
+    font-weight: 600;
+    line-height: 1.5;
+    color: #000;
+  }
+
+  &__position {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: $grey;
+  }
+}
